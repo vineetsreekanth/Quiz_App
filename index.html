@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz Application</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="start-quiz">
+        <h1>Quiz Application!</h1>
+        <p>Rules of the Quiz:</p>
+        <ul>
+            <li>You will have 60 seconds to answer each question.</li>
+            <li>There are a total of 10 questions in this quiz.</li>
+            <li>Each correct answer will earn you one point.</li>
+            <li>There is no penalty for incorrect answers.</li>
+            <li>If you do not select an answer within the time limit, the quiz will automatically advance to the next
+                question.</li>
+            <li>Once you have completed all questions, your final score will be displayed.</li>
+        </ul>
+
+        <!-- <h2>Are you Ready to Start the Quiz?</h2> -->
+        <button id="start">Start</button>
+    </div>
+    <div class="container" style="display: none;">
+        <div class="quiz-header">
+            <!-- <h1>Quiz Application</h1> -->
+            <div class="scoreboard">
+                <span>Score: <span id="score">0</span></span>
+                <span>Time: <span id="timer">0:00</span></span>
+            </div>
+        </div>
+        <div class="quiz-body">
+            <div class="question">
+                <span id="question-number">Question 1:</span>
+                <p id="question-text">What is the capital of France?</p>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="option" value="option1"> Paris</label><br>
+                <label><input type="radio" name="option" value="option2"> Rome</label><br>
+                <label><input type="radio" name="option" value="option3"> Madrid</label><br>
+                <label><input type="radio" name="option" value="option4"> Berlin</label><br>
+            </div>
+            <button id="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <div id="quiz-completed" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <p>Your Score is: <span id="final-score"></span>/<span id="total-questions"></span> questions</p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
